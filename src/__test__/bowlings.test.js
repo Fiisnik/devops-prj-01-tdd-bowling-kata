@@ -34,3 +34,13 @@ describe('test that one spare is handled ', () => {
     expect(game.score()).toBe(16)
   })
 })
+
+describe('test that one strike is handled', () => {
+  test('should return value : 14', () => {
+    game.roll(10) // Strike
+    game.roll(1)
+    game.roll(1)
+    rollMany(17, 0)
+    expect(game.score()).toBe(14)
+  })
+})
