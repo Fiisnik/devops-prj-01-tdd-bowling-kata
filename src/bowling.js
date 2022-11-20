@@ -12,9 +12,8 @@ module.exports = class Game {
     let rollIndex = 0
 
     for (let frameIndex = 0; frameIndex < 10; frameIndex++) {
-      if (this.rolls[rollIndex] === 10) {
-        score +=
-                    10 + this.rolls[rollIndex + 1] + this.rolls[rollIndex + 2]
+      if (this.isStrike(rollIndex)) {
+        score += this.strikeBonus(rollIndex)
         rollIndex++
         continue
       }
@@ -37,5 +36,13 @@ module.exports = class Game {
 
   spareBonus (rollIndex) {
     return 10 + this.rolls[rollIndex + 2]
+  }
+
+  isStrike (rollIndex) {
+    return this.rolls[rollIndex] === 10
+  }
+
+  strikeBonus (rollIndex) {
+    return 10 + this.rolls[rollIndex + 1] + this.rolls[rollIndex + 2]
   }
 }
