@@ -44,3 +44,9 @@ describe('test that one strike is handled', () => {
     expect(game.score()).toBe(14)
   })
 })
+describe('test of a perfect game', () => {
+  test('should return value : 300', () => {
+    rollMany(12, 10)
+    expect(game.score()).toBe(300)
+  })
+})
