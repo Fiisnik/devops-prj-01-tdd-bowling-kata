@@ -1,6 +1,6 @@
 # devops-prj-01-tdd-bowling-kata
 
-Project Bowling Kata 
+Project Bowling Kata
 
 Developers : Michael and Fisnik
 

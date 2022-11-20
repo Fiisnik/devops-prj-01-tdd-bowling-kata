@@ -1,18 +1,13 @@
 module.exports = class Game {
+  constructor (score) {
+    this.score = score
+  }
 
-    
+  roll (pins) {
+    this.score += pins
+  }
 
-
-    roll(pins){
-
-    }
-
-
-     score(){
-        return 0;
-     }
-
-
-
-
+  scores () {
+    return this.score
+  }
 }
